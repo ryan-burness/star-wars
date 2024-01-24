@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+
+:root {
+     --transition: all 0.5s ease-in-out;
+    --p1: 246, 87, 30;
+    --p2: 255, 172, 5;
+    --sw-bg-dark: 0, 0, 0;
+    --sm-txt-white: 255, 255, 255;
+    --n3: 36, 40, 41;
+    --n4: 13, 15, 18;
+    --n6: 181, 181, 181;
+    --s1: 96, 214, 0;
+    --bs-body-bg: 0, 0, 0;
+}
+
+body {
+    color: rgb(var(--sm-txt-white));
+    background: rgb(var(--sw-bg-dark));
+    min-height: 100vh;
+    position: relative;
+}
+
+h1, h2 {
+    font-family: var(--head-font);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.character-section .character-wrapper.alt {
+    max-width: unset;
+}
+
+.character-section .character-wrapper {
+    margin: 0 auto;
+}
+
+    .character-section .character-wrapper .btn-half-border {
+        z-index: 1;
+    }
+
+.bg-1 {
+    background: rgb(var(--p1));
+}
+
+.tabcontents {
+    position: relative;
+}
+
+.tabitem.active {
+    display: block;
+    margin: 0rem 0 4rem;
+}
+
+.tabitem {
+    display: none;
+    transition: 0.5s all;
+}
+
+.character-section .character-wrapper .character-card {
+    border: 1px solid rgb(var(--n3));
+    border-radius: 24px;
+    transition: all 0.7s ease-in-out;
+}
+
+.bgn-dark {
+    background: rgb(var(--n4));
+}
+
+.bgn-light-dark {
+    background: rgba(var(--n3), 0.4);
+}
+
+.tcn-1 {
+    color: rgb(var(--sm-txt-white));
+}
+
+.tcp-2 {
+    color: rgb(var(--p2));
+}
+
+.tcn-6 {
+    color: rgb(var(--n6));
+}
+
+.character-section .character-wrapper .character-card .character-img .img-area {
+    border-radius: 12px;
+    height: 230px;
+    width: 100%;
+}
+
+.character-section .character-wrapper .character-card .character-img .card-status {
+    border-radius: 46px;
+    border: 1px solid rgb(var(--s1));
+    background: rgb(var(--n4));
+    bottom: -10px;
+    transition: all 0.5s ease;
+}
+
+.character-section .character-wrapper .character-card .character-title,
+.character-section .character-wrapper .character-card .item-animate {
+    transition: all 0.5s ease;
+}
+
+.character-section .character-wrapper .character-card .card-info .info-text {
+    border-radius: 12px;
+}
+
+.v-line {
+    width: 1px;
+    height: 100%;
+    height: 100%;
+    min-height: 20px;
+    background: rgb(var(--sm-txt-white), 0.2);
+    display: block;
+}
+
+.hr-line.line3 {
+    background: rgb(var(--n3), 0.6);
+}
+
+.hr-line {
+    width: 100%;
+    height: 1px;
+    background: rgb(var(--sm-txt-white), 0.2);
+}
+
+.planet-btn-sel {
+    transition: all 0.5s ease;
+    border-color: rgb(var(--s1)) !important;
+    color: rgb(var(--s1)) !important;
+}
+
+    .planet-btn-sel.active {
+        border-color: rgb(var(--p1)) !important;
+        color: rgb(var(--p1)) !important;
+    }
+
+.square-ratio {
+    aspect-ratio: 1 / 1;
+}
+
+img.square-ratio {
+    object-fit: contain;
+    object-position: center;
+    image-rendering: auto;
+}
+
+.planet-info .planet-img {
+    width: 80px;
+}
+
+.fa-slow-animate {
+    --fa-animation-duration: 2s;
+}
+
+.action-task-bar {
+    background-color: rgb(44 47 52 / 96%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    font-size: 1.25rem;
+}
+
+    .action-task-bar .action-item {
+        width: 120px;
+    }
+
+.action-current-color {
+    color: var(--bs-cyan);
+}
+
+.action-target-color {
+    color: var(--bs-form-invalid-color);
+}
+
+.action-success-color {
+    color: var(--bs-warning);
+}

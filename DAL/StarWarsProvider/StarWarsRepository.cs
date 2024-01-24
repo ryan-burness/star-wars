@@ -19,7 +19,7 @@ namespace DAL.StarWarsProvider
         public async Task<List<Character>> GetCharactersAsync()
         {
             List<Character> characters = [];
-            _logger.LogInformation("StarWarsRepository GetCharactersAsync");
+
             try
             {
                 var people = await GetPeopleAsync();
@@ -72,7 +72,7 @@ namespace DAL.StarWarsProvider
             }
             catch (Exception ex)
             {
-                _logger.LogInformation($"Error StarWarsRepository GetCharactersAsync - {ex.Message}");
+                _logger.LogError($"Error StarWarsRepository GetCharactersAsync - {ex.Message}");
             }
 
             return characters;
@@ -103,8 +103,6 @@ namespace DAL.StarWarsProvider
             ApiResponseWrapper<T>? responseWrapper = await JsonSerializer.DeserializeAsync<ApiResponseWrapper<T>>(contentStream, options);
 
             List<T> items = responseWrapper?.Results ?? [];
-
-            _logger.LogInformation($"StarWarsRepository GetAsync ${endpoint}");
 
             return items;
         }
